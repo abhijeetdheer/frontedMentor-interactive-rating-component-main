@@ -1,0 +1,138 @@
+@import url("https://fonts.google.com/specimen/Overpass");
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    font-family: 'Overpass',sans-serif;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 200px;
+    position: relative;
+}
+h1{
+    font-size: 1.7rem;
+}
+
+.card1,.card2{
+    max-width: 350px;
+    background-color: aqua;
+    border-radius: 1.5rem;
+    padding: 25px 35px;
+    background-image: linear-gradient(var(--Dark-Blue), var(--Very-Dark-Blue));
+}
+
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: bisque;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition:all .15s;
+}
+
+.card2 h1{
+    margin: 0;
+    text-align: center;
+}
+.active{
+    transform: scale(1);
+}
+
+.star{
+    display: inline-block;
+    background-color: #323d49;
+    border-radius: 50%;
+    padding: 5px 7px;
+}
+
+.content p{
+    line-height: 1.5;
+}
+
+.content{
+    margin-top: 15px;
+}
+ul{
+    display: flex;
+    padding: 0px;
+    margin: 25px 0;
+    justify-content: space-between;
+}
+li{
+    display: inline-block;
+    width: auto;
+    list-style: outside none none;
+    color: var(--Light-Grey);
+    background-color: var(--Dark-Blue);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 45px;
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover:not(.rating-clicked){
+    background-color: var(--Medium-Grey);
+    color: white;
+    cursor: pointer;
+}
+
+.rating-clicked{
+    background-color: var(--orange);
+    color: white;
+}
+
+.selected{
+    margin-top: 10px;
+    color: var(--orange);
+    background-color: var(--Dark-Blue);
+    padding: 7px 10px;
+    border-radius: .9rem;
+}
+.content2{
+    padding-top: 10px;
+}
+.content2 p{
+    color: white;
+    text-align-last: center;
+}
+button {
+    font-size: 1rem;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    border-radius: .9rem;
+    border: 0 transparent;
+    background-color: var(--orange);
+    color: white;
+    transition: all .5s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: var(--orange);
+}
